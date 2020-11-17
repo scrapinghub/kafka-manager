@@ -6,7 +6,7 @@ RUN apk update && \
 COPY . /tmp/kafka-manager
 RUN cd /tmp/kafka-manager && ./sbt clean dist
 RUN unzip /tmp/kafka-manager/target/universal/cmak-*.zip -d /tmp && \
-    mv /tmp/kafka-manager-* /app
+    mv /tmp/cmak-* /app
 
 WORKDIR /app
 
